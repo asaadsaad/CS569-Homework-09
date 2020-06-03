@@ -8,6 +8,6 @@ Create a lazy-loaded module `FeedbackModule` that displays a reactive form to al
 * `fullname` should have at least two words separated by a space. 
 * `email` to be a valid email.
 * `message` has to contain at least 100 chars. Display a reactive value of the remaining chars.
-* All fields are required. `submit` must only be activated when all form validation rules are met.
+* All fields are required. `submit` button should only be activated when all form validation rules are met.
 * Log the form value in the console. 
 
