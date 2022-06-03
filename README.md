@@ -17,6 +17,6 @@ Build an Angular project using Angular Router and Angular Reactive Forms to mana
 * Edit an existing address `{path: 'edit/:address_id', component: EditComponent}`) 
   
 **Other Requirements**
-* Assuming that all fields are required, create an aynchromous validator to check that the `zipcode` is unique.  
+* Assuming that all fields are required, create an asynchromous validator to check that the `zipcode` is unique.  
 * Create a `checkChrome` guard to be applied on `EditComponent`, which uses a service `CompatibilityService` and [checks](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent) if the app is working on `Chrome` version 100+. 
 
