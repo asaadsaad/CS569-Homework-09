@@ -14,10 +14,6 @@ Use the [Request Response API](https://reqres.in/) and build an Angular applicat
 **API Summary**  
 You may use the following types:
 ```ts
-export interface IResponse {
-  data: IUser[]
-}
-
 export interface IUser {
   id?: number
   email: string
@@ -28,10 +24,10 @@ export interface IUser {
 ```
 
 GET https://reqres.in/api/users  
-Response Type: IResponse  
+Response Type: { data: IUser[] }  
   
 GET https://reqres.in/api/users/:user_id  
-Response Type: IResponse
+Response Type: { data: IUser }  
 
 POST https://reqres.in/api/users   
 Request Type: IUser  
