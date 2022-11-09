@@ -11,6 +11,39 @@ Use the [Request Response API](https://reqres.in/) and build an Angular applicat
 * Use Angular Router and Reactive Form Modules.
 * The API does not add, update, delete your data. However, you will need to update your state as if it were doing so.
   
+**API Summary**  
+You may use the following types:
+```ts
+export interface IResponse {
+  data: IUser[]
+}
+
+export interface IUser {
+  id?: number
+  email: string
+  first_name: string
+  last_name: string
+  avatar: string
+}
+```
+
+GET https://reqres.in/api/users  
+Response Type: IResponse  
+  
+GET https://reqres.in/api/users/:user_id  
+Response Type: IUser
+
+POST https://reqres.in/api/users   
+Request Type: IUser  
+Response Type: IUser  
+  
+PUT, PATCH https://reqres.in/api/users/:user_id  
+Request Type: IUser  
+Response Type: IUser  
+
+DELETE https://reqres.in/api/users/:user_id  
+Response Status Code: 204, the HTTP 204 No Content success status response code indicates that a request has succeeded
+  
 **Optional Requirements**
 * Use the API to register and login and save the user state globally, then only allow using the above features only after they login. 
   
