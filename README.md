@@ -31,7 +31,7 @@ GET https://reqres.in/api/users
 Response Type: IResponse  
   
 GET https://reqres.in/api/users/:user_id  
-Response Type: IUser
+Response Type: IResponse
 
 POST https://reqres.in/api/users   
 Request Type: IUser  
