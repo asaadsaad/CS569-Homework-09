@@ -41,7 +41,7 @@ DELETE https://reqres.in/api/users/:user_id
 Response Status Code: 204, the HTTP 204 No Content success status response code indicates that a request has succeeded
   
 **Optional Requirements**
-* Use the API to register and login and save the user state globally, then only allow using the above features only after they login. 
+* Use the API to register and login and save the user state globally, then allow using the above features after they login. 
   
 **Working with featured module**
 * Create a `UserModule` (ng g m user)
