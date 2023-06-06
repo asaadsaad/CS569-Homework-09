@@ -12,7 +12,7 @@ Use the [Request Response API](https://reqres.in/) and build an Angular applicat
 * The API does not add, update, delete your data. However, you will need to update your state as if it were doing so.
   
 **API Summary**  
-You may use the following types:
+You may use the following interface:
 ```ts
 export interface IUser {
   id?: number
