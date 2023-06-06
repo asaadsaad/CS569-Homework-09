@@ -40,10 +40,10 @@ Response Type: IUser
 DELETE https://reqres.in/api/users/:user_id  
 Response Status Code: 204, the HTTP 204 No Content success status response code indicates that a request has succeeded
   
-**Optional Requirements**
+## Add Login and Signup
 * Use the API to register and login and save the user state globally, then allow using the above features after they login. 
   
-**Working with featured module**
+## Working with featured module
 * Create a `UserModule` (ng g m user)
 * Add the `RouterModule` to both `AppModule` and `UserModule`
 * Convert `AppComponent` to a template, and a router link to go to 'users'.
@@ -57,14 +57,15 @@ Configure `UserModule` router to display:
 * `AddUserComponent`
 * `UpdateUserComponent`
   
-Create a `UserService` within `UserModule` that's provided at root  
-Add `HttpClientModule` to `AppModule`
-Add `ReactiveFormsModule` to `UserModule`  
+Remember to:
+* Create a `UserService` within `UserModule` that's provided at root  
+* Provide `HttpClient` service at `AppModule`
+* Add `ReactiveFormsModule` to both `AppModule` and `UserModule`  
   
 `AppModule` should look like this:
 ```javascript
 declarations: [AppComponent, WelcomeComponent]
-imports: [BrowserModule, HttpClientModule, RouterModule.forRoot()] // configure the router to load the UserModule in Lazy way
+imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot()], providers: [provideHttpClient()] // configure the router to load the UserModule in Lazy way
 ```
 UserModule should look like this:
 ```javascript
@@ -74,5 +75,5 @@ imports: [CommonModule, ReactiveFormsModule, RouterModule.forChild()] // configu
 Remember:
 * we need `BrowserModule` in `AppModule`, and `CommonModule `in all featured modules (Hybrid)
 * we need `RouterModule.forRoot()` in `AppModule`, and `RouterModule.forChild()` in all featured modules (Hybrid)
-* we need `HttpClientModule` only once in `AppModule` (Service-Based)
+* we need to provide `HttpClient` service only once in `AppModule` (Service-Based)
 * we need `ReactiveFormsModule` in every module that requires forms (Component-Based)
